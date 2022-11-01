@@ -1,0 +1,23 @@
+<h1>Hello World!</h1>
+
+<p>This is my first webpatge!!!</p>
+
+<p>This is the passed first_name variable: {{ first_name }}</p>
+
+<p>{{ stuff|striptags }}</p>
+
+<h3>Favorite Pizzas:</h3>
+
+{% for topping in favorite_pizzas %}
+
+{% if topping == 'Cheese' %}
+<b>{{ topping }}</b><br />
+{% elif topping == 'Pepperoni' %}
+<i>{{ topping }}</i><br />
+{% else %}
+{{ topping }}<br />
+{% endif %}
+
+{% endfor %}
+
+<p>{{ favorite_pizzas.0 }}</p>
